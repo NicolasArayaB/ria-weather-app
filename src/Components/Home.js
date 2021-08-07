@@ -1,31 +1,21 @@
 import React from 'react';
-import { motion, AnimateSharedLayout } from 'framer-motion';
-import styled from 'styled-components';
 
-import City from './CityComponent'
+import HoursCard from './HoursCard'
+import { Container, Title } from '../Styles/Commons';
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`
+const cities = ['Rio', 'Beijing', 'Los Angeles'];
 
 const Home = () => {
   return (
-    <AnimateSharedLayout>
-      <Wrapper>
-        <motion.ul layout initial={{ borderRadius: 25 }}>
-          {cities.map(city => (
-            <City key={city} city={city} />
-          ))}
-        </motion.ul>  
-      </Wrapper>
-    </AnimateSharedLayout>
+    <Container dir='column' bgColor='#fff' margin='0'>
+      <Title>The next hours in the world</Title>
+        <Container dir='column' minHeight='200px'>
+          {cities.map((city, index) => { 
+            return <HoursCard key={index} city={city} index={index} title={city} />
+          })}
+        </Container>
+    </Container>
   );
 }
 
 export default Home;
-
-const cities = ['Rio de Janeiro', 'Beijin', 'Los Angeles'];
-
-
-
