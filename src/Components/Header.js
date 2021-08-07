@@ -5,22 +5,21 @@ const TitleWrapper = styled.section`
   background-color: #99EEFF;
   display: flex;
   img {
-    width: 7em;
     @media(max-width: 500px){
       width: 5em;
-    }
+  };
   justify-content: flex-start;
-  margin-bottom: 30px; 
-  padding: 15px 0 0 15px;
+  margin-bottom: 30px;
   max-width: 7em;
+  padding: 15px 0 0 15px;
   width: 100%;
 `;
 
 const Title = styled.h1`
-color: #fff;
-font-size: 1.5em;
-font-family: 'Ubuntu', sans-serif;
-text-align: center;
+  color: #666;
+  font-size: 1.5em;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
 `;
 
 const Header = () => {
