@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const TitleWrapper = styled.section`
+const TitleWrapper = styled.section `
   align-items: center;
   background-color: #1181B2;
   display: flex;
@@ -15,7 +15,7 @@ const TitleWrapper = styled.section`
   width: 100%;
 `;
 
-const Title = styled.h1`
+const Title = styled.h1 `
   color: #DDEDF4;
   font-size: 1.5em;
   font-family: 'Ubuntu', sans-serif;
@@ -29,6 +29,6 @@ const Header = () => {
       <Title>Weather App</Title>
     </TitleWrapper>
   )
-}
+};
 
 export default Header;

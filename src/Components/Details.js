@@ -1,10 +1,11 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 
-import { Container, Title } from '../Styles/Commons'
 import HoursCard from './HoursCard';
 import DailyCard from './DailyCard';
 import Anchor from './Anchor';
+
+import { Container, Title } from '../Styles/Commons';
 
 const Details = () => {
   const params = useParams();
@@ -20,9 +21,9 @@ const Details = () => {
       <Container dir='column' minHeight='200px'>
         <DailyCard city={params.city} days={days} title={`Next ${days} days`} />
       </Container>
-      {!params.city ? '' : <Anchor /> }
+      { !params.city ? '' : <Anchor /> }
     </Container>
   )
-}
+};
 
 export default Details;

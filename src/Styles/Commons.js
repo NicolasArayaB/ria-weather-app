@@ -24,22 +24,7 @@ export  const Container = styled.div `
     margin-bottom: 10px;
     padding-bottom: 0px;
   }
-`
-export const Title = styled.div `
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 4em;
-  margin: 0.5em 0;
-  color: #1181B2;
-  
-  @media(max-width: 800px){
-    font-size: 2.5em;
-    margin 0.5em 0 0;
-  }
-`
+`;
 
 export const Heading = styled.div`
   color: #DDEDF4;
@@ -47,8 +32,24 @@ export const Heading = styled.div`
   margin: 0.5em;
 
   @media(max-width: 800px){
-    vertical-align: text-bottom;
     font-size: 1.6em;
     margin: 10px 0 0 0;
+    vertical-align: text-bottom;
   }
-`
+`;
+
+export const Title = styled.div `
+  align-items: center;
+  color: #1181B2;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  font-size: 4em;
+  margin: 0.5em 0;
+  width: 100%;
+
+  @media(max-width: 800px){
+    font-size: 2.5em;
+    margin 0.5em 0 0;
+  }
+`;

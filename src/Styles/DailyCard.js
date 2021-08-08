@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
 export const TableWrapper = styled.div `
-flex-direction: column;
+
 background-color: #1181B2;
-color: #DDEDF4;
-padding: 0 2em 2em;
-margin: 1.5em 1em;
-box-shadow: 5px 10px 8px #888888;
 border-radius: 20px;
+box-shadow: 5px 10px 8px #888888;
+color: #DDEDF4;
+flex-direction: column;
 justify-content: center;
 height: fit-content;
-text-align: center;
 max-width: 90%;
+margin: 1.5em 1em;
+padding: 0 2em 2em;
+text-align: center;
 
 table {
   border-collapse: collapse;
@@ -19,25 +20,6 @@ table {
 
 td, th {
   padding: 2em;
-}
-
-@media(max-width: 800px){
-  font-size: 0.3em
-  table {
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-    max-width: 80%;
-  }
-  td, th {
-    padding: 0.3em;
-  }
-  img {
-    width: 4em;
-  }
-  p {
-    margin: 0 0 0.6em;
-  }
 }
 
 td:first-child, th:first-child {
@@ -53,4 +35,27 @@ tr:nth-child(even), thead tr {
   border-radius: 20px;
   color: #1181B2;
 }
-`
+
+@media(max-width: 800px){
+  font-size: 0.3em
+  
+  img {
+    width: 4em;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    max-width: 80%;
+  }
+
+  td, th {
+    padding: 0.3em;
+  }
+
+  p {
+    margin: 0 0 0.6em;
+  }
+}
+`;

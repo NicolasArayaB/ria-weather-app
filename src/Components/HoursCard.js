@@ -1,22 +1,21 @@
 import React, { useContext, useEffect }  from 'react';
 import { useParams } from 'react-router';
 
+import Anchor from './Anchor';
 import { Context } from '../Store/AppContext';
+
 import { Container, Heading } from '../Styles/Commons';
 import { Info, InfoCard } from '../Styles/HoursCard';
-import Anchor from './Anchor';
-
-
 
 const HoursCard = (props) => {
   const { actions, store } = useContext(Context);
   const params = useParams();
-  
+
   let localForecast = store.hourlyForecast[props.city] ? store.hourlyForecast[props.city].data : '';
   
-  const cleanTime = (index) => (localForecast[index].timestamp_local).split('T')[1]
-  const getIcon = (icon) => 'https://www.weatherbit.io/static/img/icons/' + icon + '.png'
-  const forecast = () => actions.getHourlyForecast(props.city, props.hours || 4)
+  const cleanTime = (index) => (localForecast[index].timestamp_local).split('T')[1];
+  const getIcon = (icon) => 'https://www.weatherbit.io/static/img/icons/' + icon + '.png';
+  const forecast = () => actions.getHourlyForecast(props.city, props.hours || 4);
 
   useEffect(() => {
     forecast();
@@ -41,12 +40,12 @@ const HoursCard = (props) => {
               <p>{localHourly.temp}</p>
             </Container>
           </Container>
-        </InfoCard>)          
+        </InfoCard>)
         }): ''}
       </Info>
       {params.city ? <Container minHeight='0.3em' /> : <Anchor city={props.city} /> }
     </Container>
   );
-}
+};
 
 export default HoursCard;

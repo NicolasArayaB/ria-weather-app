@@ -6,19 +6,19 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Details from './Components/Details';
 
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
     align-items: center;
-    background-color: #DDEDF4; 
+    background-color: #DDEDF4;
     display: flex;
     flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding-bottom: 0em;
     width: 100%;
-    font-family: 'Ubuntu', sans-serif;
-    
+
     @media (max-width: 800px){
       font-size: 0.7em;
     }
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   #root {
     width: 100%;
   }
-`
+`;
 
 const App = () => {
   return(
@@ -46,6 +46,6 @@ const App = () => {
       </Router>
     </div>
   )
-}
+};
 
 export default injectContext(App);

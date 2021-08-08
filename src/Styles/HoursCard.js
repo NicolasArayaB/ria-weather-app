@@ -1,40 +1,41 @@
 import styled from "styled-components";
 
 export const InfoCard = styled.div`
-width: 20%;
-display: flex;
-flex-direction: column;
-align-items: center;
-position: relative;
-color: #1181B2;
-img {
-  padding: 1em;
-  width: 4em;
-}
+  align-items: center;
+  color: #1181B2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 20%;
 
-h4 {
-  color: #DDEDF4;
-}
+  img {
+    padding: 1em;
+    width: 4em;
+  }
 
-@media(max-width:800px){
- height: fit-content;
- padding-bottom: 0.3em;
- aling-items: end;
-}
-`
+  h4 {
+    color: #DDEDF4;
+  }
+
+  @media(max-width:800px){
+   aling-items: end;
+   height: fit-content;
+   padding-bottom: 0.3em;
+  }
+`;
+
 export const Info = styled.div `
-justify-content: space-around;
-width: 55em;
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-align-items:center;
-padding: 0 3em 3em 3em;
-justify-content: space-between;
+  align-items:center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 3em 3em 3em;
+  width: 55em;
 
-@media (max-width: 800px) {
-  margin: 0 2em;
-  padding: 0 1.2em 1.2em;
-  width: 25em;
-}
-`
+  @media (max-width: 800px) {
+    margin: 0 2em;
+    padding: 0 1.2em 1.2em;
+    width: 25em;
+  }
+`;
