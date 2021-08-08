@@ -18,14 +18,14 @@ const TitleWrapper = styled.section `
 const Title = styled.h1 `
   color: #DDEDF4;
   font-size: 1.5em;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Lilita One', cursive;
   text-align: center;
 `;
 
 const Header = () => {
   return(
     <TitleWrapper>
-      <img alt='Weather logo' src='./logo.png' />
+      <img alt='Weather logo' src='./newLogo.png' />
       <Title>Weather App</Title>
     </TitleWrapper>
   )
