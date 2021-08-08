@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const TitleWrapper = styled.section`
   align-items: center;
-  background-color: #99EEFF;
+  background-color: #1181B2;
   display: flex;
   img {
     @media(max-width: 500px){
@@ -16,7 +16,7 @@ const TitleWrapper = styled.section`
 `;
 
 const Title = styled.h1`
-  color: #666;
+  color: #DDEDF4;
   font-size: 1.5em;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;

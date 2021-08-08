@@ -13,7 +13,6 @@ export  const Container = styled.div `
   min-height: ${(props)=> props.minHeight};
 
   p {
-    margin: 2px;
     text-align: center;
   }
 
@@ -32,61 +31,24 @@ export const Title = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
-  margin: 25px 0;
+  font-size: 4em;
+  margin: 0.5em 0;
+  color: #1181B2;
   
   @media(max-width: 800px){
-    font-size: 1.6em;
-    margin: 10px;
+    font-size: 2.5em;
+    margin 0.5em 0 0;
   }
 `
-export const Info = styled.div `
-justify-content: space-around;
-width: 55em;
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-align-items:center;
-padding: 0 3em 3em 3em;
-justify-content: space-between;
 
-@media (max-width: 800px) {
-  margin: 0 2em 2em 2em;
-  padding: 0;
-  width: 25em;
-}
-`
 export const Heading = styled.div`
-color: #666;
-font-size: 1.4em;
-margin: 0.5em;
+  color: #DDEDF4;
+  font-size: 1.8em;
+  margin: 0.5em;
 
-@media(max-width: 800px){
-  vertical-align: text-bottom;
-  font-size: 1.2em;
-  margin: 10px 0 0 0;
-}
-
-`
-
-export const InfoCard = styled.div`
-width: 20%;
-display: flex;
-flex-direction: column;
-align-items: center;
-position: relative;
-
-height: 140px;
-img {
-  width: 6em;
-}
-
-@media(max-width:800px){
- height: 125px;
- padding-bottom: 1em;
- aling-items: end;
- img {
-   width: 4em;
- }
-}
+  @media(max-width: 800px){
+    vertical-align: text-bottom;
+    font-size: 1.6em;
+    margin: 10px 0 0 0;
+  }
 `

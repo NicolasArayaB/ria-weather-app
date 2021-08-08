@@ -2,8 +2,11 @@ import React, { useContext, useEffect }  from 'react';
 import { useParams } from 'react-router';
 
 import { Context } from '../Store/AppContext';
-import { Container, Info, InfoCard, Heading } from '../Styles/Commons';
+import { Container, Heading } from '../Styles/Commons';
+import { Info, InfoCard } from '../Styles/HoursCard';
 import Anchor from './Anchor';
+
+
 
 const HoursCard = (props) => {
   const { actions, store } = useContext(Context);
@@ -11,13 +14,8 @@ const HoursCard = (props) => {
   
   let localForecast = store.hourlyForecast[props.city] ? store.hourlyForecast[props.city].data : '';
   
-  const cleanTime = (index) => {
-    let time = (localForecast[index].timestamp_local).split('T')[1]
-    return time;
-  }
-
+  const cleanTime = (index) => (localForecast[index].timestamp_local).split('T')[1]
   const getIcon = (icon) => 'https://www.weatherbit.io/static/img/icons/' + icon + '.png'
-
   const forecast = () => actions.getHourlyForecast(props.city, props.hours || 4)
 
   useEffect(() => {
@@ -25,7 +23,7 @@ const HoursCard = (props) => {
   }, []);
 
   return (
-    <Container dir='column' bgColor='#99EEFF' margin='2em 1em' shadow='5px 10px 8px #888888'>
+    <Container dir='column' bgColor='#1181B2' margin='2em 1em' shadow='5px 10px 8px #888888'>
       <Heading>{props.title}</Heading>
       <Info>
         {Array.isArray(localForecast) ? localForecast.map((localHourly, index)=>{
@@ -34,9 +32,11 @@ const HoursCard = (props) => {
           <Container>
             <h4>{cleanTime(index)}</h4>
           </Container>
-          <Container className='single' dir='row'>
-            <img alt='weather icon' src={getIcon(localHourly.weather.icon)} />
-            <Container dir='column'>
+          <Container dir='row' bgColor='#fff'>
+            <Container >
+              <img alt='weather icon' src={getIcon(localHourly.weather.icon)} />
+            </Container>
+            <Container margin='0 1.5em' dir='column' >
               <p>{localHourly.weather.description}</p>
               <p>{localHourly.temp}</p>
             </Container>
@@ -44,7 +44,7 @@ const HoursCard = (props) => {
         </InfoCard>)          
         }): ''}
       </Info>
-      {params.city ? '' : <Anchor city={props.city} /> }
+      {params.city ? <Container minHeight='0.3em' /> : <Anchor city={props.city} /> }
     </Container>
   );
 }

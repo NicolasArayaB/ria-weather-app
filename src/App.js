@@ -11,7 +11,7 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   body {
     align-items: center;
-    background-color: #fff; 
+    background-color: #DDEDF4; 
     display: flex;
     flex-direction: column;
     margin: 0;

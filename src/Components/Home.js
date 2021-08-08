@@ -7,7 +7,7 @@ const cities = ['Rio', 'Beijing', 'Los Angeles'];
 
 const Home = () => {
   return (
-    <Container dir='column' bgColor='#fff' margin='0'>
+    <Container dir='column' bgColor='#DDEDF4'>
       <Title>The next hours in the world</Title>
         <Container dir='column' minHeight='200px'>
           {cities.map((city, index) => { 

@@ -12,7 +12,7 @@ const Details = () => {
   let days = 4;
 
   return(
-    <Container dir='column' bgColor='#fff' margin='0'>
+    <Container dir='column' bgColor='#DDEDF4' margin='0'>
       <Title>{params.city === 'rio'|| params.city === 'Rio' ? 'Rio de Janeiro' : params.city}</Title>
       <Container dir='column' minHeight='200px'>
         <HoursCard city={params.city} hours={hours} title={`Next ${hours} hours`} />
@@ -20,7 +20,6 @@ const Details = () => {
       <Container dir='column' minHeight='200px'>
         <DailyCard city={params.city} days={days} title={`Next ${days} days`} />
       </Container>
-
       {!params.city ? '' : <Anchor /> }
     </Container>
   )
