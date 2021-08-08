@@ -56,7 +56,7 @@ const DailyCard = (props) => {
               <p>{localDaily.dewpt}</p>
             </td>
           </tr>)
-          }): ''}
+          }) : ''}
         </tbody>
       </table>
       { params.city ? '' : <Anchor city={props.city} /> }

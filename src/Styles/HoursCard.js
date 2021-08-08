@@ -21,6 +21,10 @@ export const InfoCard = styled.div`
    aling-items: end;
    height: fit-content;
    padding-bottom: 0.3em;
+
+   p {
+     font-size: 0.8em;
+   }
   }
 `;
 

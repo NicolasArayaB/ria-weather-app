@@ -49,7 +49,7 @@ export const Title = styled.div `
   width: 100%;
 
   @media(max-width: 800px){
-    font-size: 2.5em;
+    font-size: 2.3em;
     margin 0.5em 0 0;
   }
 `;
