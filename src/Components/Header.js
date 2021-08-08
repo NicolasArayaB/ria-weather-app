@@ -25,7 +25,7 @@ const Title = styled.h1 `
 const Header = () => {
   return(
     <TitleWrapper>                 
-      <img alt='Weather logo' src='./newLogo.png' />
+      <img alt='Weather logo' src='https://res.cloudinary.com/dkjaz9pdx/image/upload/v1628439274/samples/newLogo_kadqqg.png' />
       <Title>Weather App</Title>
     </TitleWrapper>
   )
