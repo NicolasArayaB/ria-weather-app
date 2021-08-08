@@ -2,7 +2,8 @@ import React, { useContext, useEffect }  from 'react';
 import { useParams } from 'react-router';
 
 import { Context } from '../Store/AppContext';
-import { Container, Info, InfoCard, Heading } from '../Styles/Commons';
+import { Heading } from '../Styles/Commons';
+import { TableWrapper } from '../Styles/DailyCard';
 import Anchor from './Anchor';
 
 const DailyCard = (props) => {
@@ -25,27 +26,44 @@ const DailyCard = (props) => {
   }, []);
 
   return (
-    <Container dir='column' bgColor='#99EEFF' margin='1em' shadow='5px 10px 8px #888888'>
+    <TableWrapper>
       <Heading>{props.title}</Heading>
-      <Info>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Weather</th>
+            <th>Temperature</th>
+            <th>Min/Max Temperature</th>
+            <th>Dew Point</th>
+          </tr>
+        </thead>
+        <tbody>
         {Array.isArray(localForecast) ? localForecast.map((localDaily, index)=>{
-        return(
-        <InfoCard key={index}>
-          <Container>
-            <h4>{cleanDate(index)}</h4>
-          </Container>
-          <Container className='single' dir='row'>
-            <img alt='weather icon' src={getIcon(localDaily.weather.icon)} />
-            <Container dir='column'>
+          return(
+          <tr key={index}>
+            <td>
+              <p>{cleanDate(index)}</p>
+            </td>
+            <td>
+              <img alt='weather icon' src={getIcon(localDaily.weather.icon)} />
               <p>{localDaily.weather.description}</p>
-              <p>{localDaily.temp}</p>
-            </Container>
-          </Container>
-        </InfoCard>)          
-        }): ''}
-      </Info>
+            </td>
+            <td>
+              <p>{localDaily.temp} °C</p>
+            </td>
+            <td>
+              <p>{localDaily.min_temp + ' / ' + localDaily.max_temp}</p>
+            </td>
+            <td>
+              <p>{localDaily.dewpt}</p>
+            </td>
+          </tr>)
+          }): ''}
+        </tbody>
+      </table>
       {params.city ? '' : <Anchor city={props.city} /> }
-    </Container>
+    </TableWrapper>
   );
 }
 
