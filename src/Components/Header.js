@@ -24,8 +24,8 @@ const Title = styled.h1 `
 
 const Header = () => {
   return(
-    <TitleWrapper>
-      <img alt='Weather logo' src='https://raw.githubusercontent.com/NicolasArayaB/ria-weather-app/main/public/newLogo.png?token=APDPRH67JZBEERZNJTPCOTTBB5JJ6' />
+    <TitleWrapper>                 
+      <img alt='Weather logo' src='https://raw.githubusercontent.com/NicolasArayaB/ria-weather-app/main/public/newLogo.png?token=APDPRH6F2Q6QRJGGEOBLR6TBB5NVO' />
       <Title>Weather App</Title>
     </TitleWrapper>
   )
