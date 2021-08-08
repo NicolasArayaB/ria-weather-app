@@ -12,7 +12,7 @@ const Wrapper = styled.div `
     color: ${(props)=> props.color}};
   }
   a:hover {
-    color: ${(props)=> props.color == '#DDEDF4' ? '#CCFFFB' : '#4fb2db' } ;
+    color: ${(props)=> props.color === '#DDEDF4' ? '#CCFFFB' : '#4fb2db' } ;
   }
 `
 

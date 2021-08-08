@@ -1,7 +1,7 @@
 {
   "short_name": "Wheather App",
   "name": "Ria Small Wheather App",
-  "start_url": ".",
+  "start_url": "public",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
