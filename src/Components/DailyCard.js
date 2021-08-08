@@ -12,10 +12,10 @@ const DailyCard = (props) => {
   const { actions, store } = useContext(Context);
   const params = useParams();
   
-  let localForecast = store.dailyForecast[props.city] ? store.dailyForecast[props.city].data : '';
+  let localForecast = store.dailyForecast[props.city] ? store.dailyForecast[props.city].data : null;
 
   const getIcon = (icon) => 'https://www.weatherbit.io/static/img/icons/' + icon + '.png'
-  const forecast = () => actions.getDailyForecast(props.city, props.days || 5)
+  const forecast = () => actions.getDailyForecast(props.city, props.days || 5);
   const cleanDate = (index) => (localForecast[index].valid_date).split('-').reverse().join('/');
 
   useEffect(() => {
@@ -56,10 +56,10 @@ const DailyCard = (props) => {
               <p>{localDaily.dewpt}</p>
             </td>
           </tr>)
-          }) : ''}
+          }) : null}
         </tbody>
       </table>
-      { params.city ? '' : <Anchor city={props.city} /> }
+      {params.city ? null : <Anchor city={props.city} />}
     </TableWrapper>
   );
 }
