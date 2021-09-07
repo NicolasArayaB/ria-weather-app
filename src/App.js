@@ -30,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
+  const cities = ['Rio', 'Beijing', 'Los Angeles'];
+  
   return(
     <div className='app'>
       <Router>
@@ -37,7 +39,7 @@ const App = () => {
         <GlobalStyle />
         <Switch>
           <Route exact path='/'>
-            <Home />
+            <Home cities={cities} />
           </Route>
           <Route path='/details/:city'>
             <Details />

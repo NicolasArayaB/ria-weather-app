@@ -23,7 +23,7 @@ const HoursCard = (props) => {
 
   return (
     <Container dir='column' bgColor='#1181B2' margin='2em 1em' shadow='5px 10px 8px #888888'>
-      <Heading>{props.title}</Heading>
+      <Heading>{props.city}</Heading>
       <Info>
         {Array.isArray(localForecast) ? localForecast.map((localHourly, index)=>{
         return(
