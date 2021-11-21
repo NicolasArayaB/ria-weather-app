@@ -7,21 +7,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 
     actions: {
       getHourlyForecast: async (city, hours) => {
-        const url = 'https://api.weatherbit.io/v2.0/forecast/hourly?city=' + city + '&hours=' + hours + '&key=a5388d68ac85445b82ccb5804514c91a';
+        const url = 'https://api.weatherbit.io/v2.0/forecast/hourly?city=' + city + '&hours=' + hours + '&key=af298da3a71c4c7e932b45a24d2cd659';
 
         const request = await fetch(url);
         const data = await request.json();
 
         let store = getStore().hourlyForecast;
-        setStore({ hourlyForecast: {...store, [city]: data} })
+        setStore({ hourlyForecast: { ...store, [city]: data } })
       },
 
       getDailyForecast: async (city, days) => {
-        const url = 'https://api.weatherbit.io/v2.0/forecast/daily?days=' + days + '&city=' + city + '&key=a5388d68ac85445b82ccb5804514c91a';
+        const url = 'https://api.weatherbit.io/v2.0/forecast/daily?days=' + days + '&city=' + city + '&key=af298da3a71c4c7e932b45a24d2cd659';
         const request = await fetch(url);
         const data = await request.json();
         let store = getStore().dailyForecast;
-        setStore({ dailyForecast: {...store, [city]: data} })
+        setStore({ dailyForecast: { ...store, [city]: data } })
       }
     }
   }
